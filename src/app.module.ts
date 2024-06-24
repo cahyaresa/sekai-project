@@ -17,32 +17,14 @@ const ApiModules = [SharedModule];
       isGlobal: true,
     }),
     TypeOrmModule.forRootAsync({
-      // useFactory: (configService: ApiCustomConfigService) => {
-      //   return { ...configService.mssqlConfig };
-      // },
-      // inject: [ApiCustomConfigService],
-
-      imports: [SharedModule],
-      // useFactory: (configService: ApiConfigService) => {
-      //   return { ...configService.createTypeOrmOptions };
-      // },
-      useClass: ApiConfigService,
+      imports: [ConfigModule],
+      useFactory: (configService: ApiConfigService) => {
+        return { ...configService.mssqlConfig };
+      },
+      inject: [ApiConfigService],
     }),
     TrainersModule,
     PokemonModule,
-    // TypeOrmModule.forRoot({
-    //   type: 'mssql',
-    //   host: 'localhost',
-    //   port: 1433,
-    //   username: 'sa',
-    //   password: 'Astra@2022',
-    //   database: 'pokemon',
-    //   entities: [],
-    //   extra: {
-    //     trustServerCertificate: true,
-    //   },
-    //   synchronize: true,
-    // }),
   ],
   controllers: [AppController],
   providers: [AppService],

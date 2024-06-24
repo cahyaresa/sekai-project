@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
+import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { ConfigService } from '@nestjs/config';
 
 @Injectable()
-export class ApiConfigService implements TypeOrmOptionsFactory {
+export class ApiConfigService {
   constructor(private configService: ConfigService) {}
 
   migrations = [__dirname + '/../../migrations/*{.ts,.js}'];
@@ -13,7 +13,7 @@ export class ApiConfigService implements TypeOrmOptionsFactory {
     __dirname + '/../../modules/**/*.view-entity{.ts,.js}',
   ];
 
-  createTypeOrmOptions(): TypeOrmModuleOptions {
+  get mssqlConfig(): TypeOrmModuleOptions {
     return {
       type: 'mssql',
       host: this.configService.get<string>('DB_HOST'),

@@ -1,4 +1,8 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class PokemonService {}
+export class PokemonService {
+  getPokemonByType() {
+    return 'pokemon';
+  }
+}

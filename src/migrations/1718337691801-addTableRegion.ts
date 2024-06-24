@@ -1,10 +1,10 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export class AddTableTrainer1716954979096 implements MigrationInterface {
+export class AddTableRegion1718337691801 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'tbl_trainers',
+        name: 'tbl_regions',
         columns: [
           {
             name: 'id',
@@ -19,22 +19,12 @@ export class AddTableTrainer1716954979096 implements MigrationInterface {
             type: 'varchar',
             isNullable: false,
           },
-          {
-            name: 'generation',
-            type: 'bigint',
-            isNullable: false,
-          },
-          {
-            name: 'pokemonId',
-            type: 'bigInt',
-            isNullable: true,
-          },
         ],
       }),
     );
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('tbl_trainers');
+    await queryRunner.dropTable('tbl_regions');
   }
 }

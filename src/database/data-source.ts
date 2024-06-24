@@ -1,9 +1,8 @@
-import { DataSource } from 'typeorm';
-import dotenv from 'dotenv';
-
+import * as dotenv from 'dotenv';
 dotenv.config();
+import { DataSource } from 'typeorm';
 
-export const dataSource = new DataSource({
+export default new DataSource({
   type: 'mssql',
   host: process.env.DB_HOST,
   port: Number(process.env.DB_PORT),
@@ -16,4 +15,10 @@ export const dataSource = new DataSource({
     validateConnection: false,
     trustServerCertificate: true,
   },
+  synchronize: false,
+  dropSchema: false,
+  logging: false,
+  logger: 'file',
+  // subscribers: ['src/subscriber/**/*.ts'],
+  // migrationsTableName: 'migration_table',
 });

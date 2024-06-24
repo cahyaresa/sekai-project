@@ -18,11 +18,15 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "typeorm": "typeorm-ts-node-esm",
-    "migration:generate": "yarn run typeorm migration:generate --dataSource src/config/ormconfig.ts",
-    "migration:create": "yarn run typeorm migration:create",
-    "migration:revert": "yarn run typeorm migration:revert --dataSource src/config/ormconfig.ts",
-    "migration:run": "yarn build && yarn run typeorm migration:run --dataSource src/config/ormconfig.ts"
+    "typeorm": "npx typeorm-ts-node-commonjs",
+    "schema:sync": "npx typeorm-ts-node-commonjs schema:sync -d ./src/database/data-source.ts",
+    "typeorm:cache": "npx typeorm-ts-node-commonjs cache:clear",
+    "schema:drop": "npx typeorm-ts-node-commonjs schema:drop",
+    "migration:create": "npx typeorm migration:create ",
+    "migration:generate": "npx typeorm-ts-node-commonjs migration:generate -d ./src/database/data-source.ts",
+    "migration:show": "npx typeorm-ts-node-commonjs migration:show -d ./src/database/data-source.ts",
+    "migration:run": "npx typeorm-ts-node-commonjs migration:run -d  ./src/database/data-source.ts",
+    "migration:revert": "npx typeorm-ts-node-commonjs migration:revert -d ./src/database/data-source.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.3.8",
@@ -31,9 +35,12 @@
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/swagger": "^7.3.1",
     "@nestjs/typeorm": "^10.0.2",
+    "@types/cookie-parser": "^1.4.7",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
     "lodash": "^4.17.21",
     "mssql": "^10.0.2",
+    "node-mocks-http": "^1.14.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
     "typeorm": "^0.3.20"
