@@ -10,14 +10,14 @@ export class CreatePokemonDto {
   @IsString()
   readonly name: string;
 
-  @ApiProperty()
-  readonly type1id: number;
+  // @ApiProperty()
+  // readonly type1id: number;
 
-  @ApiProperty()
-  readonly type2id: number;
+  // @ApiProperty()
+  // readonly type2id: number;
 
-  @ApiProperty()
-  readonly speciesid: number;
+  // @ApiProperty()
+  // readonly speciesid: number;
 
   @ApiProperty()
   readonly height: string;
@@ -25,14 +25,14 @@ export class CreatePokemonDto {
   @ApiProperty()
   readonly weight: string;
 
-  @ApiProperty()
-  readonly abilities1id: number;
+  // @ApiProperty()
+  // readonly abilities1id: number;
 
-  @ApiProperty()
-  readonly abilities2id: number;
+  // @ApiProperty()
+  // readonly abilities2id: number;
 
-  @ApiProperty()
-  readonly abilities3id: number;
+  // @ApiProperty()
+  // readonly abilities3id: number;
 
   @ApiProperty()
   readonly evYield: string;
@@ -49,11 +49,11 @@ export class CreatePokemonDto {
   @ApiProperty()
   readonly growthRate: string;
 
-  @ApiProperty()
-  readonly eggGroups1id: number;
+  // @ApiProperty()
+  // readonly eggGroups1id: number;
 
-  @ApiProperty()
-  readonly eggGroups2id: number;
+  // @ApiProperty()
+  // readonly eggGroups2id: number;
 
   @ApiProperty()
   readonly gender: string;
@@ -115,6 +115,6 @@ export class CreatePokemonDto {
   @ApiProperty()
   readonly speedMax: number;
 
-  @ApiProperty()
-  readonly sprite: string;
+  // @ApiProperty()
+  // readonly sprite: string;
 }

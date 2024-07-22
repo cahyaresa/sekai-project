@@ -1,4 +1,9 @@
-import { MigrationInterface, QueryRunner, Table } from 'typeorm';
+import {
+  MigrationInterface,
+  QueryRunner,
+  Table,
+  TableForeignKey,
+} from 'typeorm';
 
 export class AddTablePokemonEggGroups1721378442860
   implements MigrationInterface
@@ -19,7 +24,7 @@ export class AddTablePokemonEggGroups1721378442860
             isNullable: true,
           },
           {
-            name: 'eggGroups',
+            name: 'eggGroupsId',
             type: 'bigint',
             isNullable: true,
           },
@@ -44,6 +49,23 @@ export class AddTablePokemonEggGroups1721378442860
         ],
       }),
     );
+
+    await queryRunner.createForeignKeys('rel_pokemonEggGroup', [
+      new TableForeignKey({
+        columnNames: ['pokemonId'],
+        referencedTableName: 'tbl_pokemon',
+        referencedColumnNames: ['pokemonId'],
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+      }),
+      new TableForeignKey({
+        columnNames: ['eggGroupsId'],
+        referencedTableName: 'tbl_eggGrpups',
+        referencedColumnNames: ['eggGroupsId'],
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+      }),
+    ]);
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {

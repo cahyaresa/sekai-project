@@ -12,14 +12,14 @@ export class PokemonDto extends AbstractDto {
   @IsString()
   readonly name: string;
 
-  @ApiProperty()
-  readonly type1id: number;
+  // @ApiProperty()
+  // readonly type1id: number;
 
-  @ApiProperty()
-  readonly type2id: number;
+  // @ApiProperty()
+  // readonly type2id: number;
 
-  @ApiProperty()
-  readonly speciesid: number;
+  // @ApiProperty()
+  // readonly speciesid: number;
 
   @ApiProperty()
   readonly height: string;
@@ -27,14 +27,14 @@ export class PokemonDto extends AbstractDto {
   @ApiProperty()
   readonly weight: string;
 
-  @ApiProperty()
-  readonly abilities1id: number;
+  // @ApiProperty()
+  // readonly abilities1id: number;
 
-  @ApiProperty()
-  readonly abilities2id: number;
+  // @ApiProperty()
+  // readonly abilities2id: number;
 
-  @ApiProperty()
-  readonly abilities3id: number;
+  // @ApiProperty()
+  // readonly abilities3id: number;
 
   @ApiProperty()
   readonly evYield: string;
@@ -51,11 +51,11 @@ export class PokemonDto extends AbstractDto {
   @ApiProperty()
   readonly growthRate: string;
 
-  @ApiProperty()
-  readonly eggGroups1id: number;
+  // @ApiProperty()
+  // readonly eggGroups1id: number;
 
-  @ApiProperty()
-  readonly eggGroups2id: number;
+  // @ApiProperty()
+  // readonly eggGroups2id: number;
 
   @ApiProperty()
   readonly gender: string;
@@ -124,21 +124,21 @@ export class PokemonDto extends AbstractDto {
     super(pokemonEntity, { excludesFields: true });
     this.pokemonId = pokemonEntity.pokemonId;
     this.name = pokemonEntity.name;
-    this.type1id = pokemonEntity.type1id;
-    this.type2id = pokemonEntity.type2id;
-    this.speciesid = pokemonEntity.speciesid;
+    // this.type1id = pokemonEntity.type1id;
+    // this.type2id = pokemonEntity.type2id;
+    // this.speciesid = pokemonEntity.speciesid;
     this.height = pokemonEntity.height;
     this.weight = pokemonEntity.weight;
-    this.abilities1id = pokemonEntity.abiliities1id;
-    this.abilities2id = pokemonEntity.abilities2id;
-    this.abilities3id = pokemonEntity.abilities3id;
+    // this.abilities1id = pokemonEntity.abiliities1id;
+    // this.abilities2id = pokemonEntity.abilities2id;
+    // this.abilities3id = pokemonEntity.abilities3id;
     this.evYield = pokemonEntity.evYield;
     this.catchRate = pokemonEntity.catchRate;
     this.baseFriendship = pokemonEntity.baseFriendship;
     this.baseExp = pokemonEntity.baseExp;
     this.growthRate = pokemonEntity.growthRate;
-    this.eggGroups1id = pokemonEntity.eggGroups1id;
-    this.eggGroups2id = pokemonEntity.eggGroups2id;
+    // this.eggGroups1id = pokemonEntity.eggGroups1id;
+    // this.eggGroups2id = pokemonEntity.eggGroups2id;
     this.gender = pokemonEntity.gender;
     this.eggCycles = pokemonEntity.eggCycles;
     this.hpBase = pokemonEntity.hpBase;

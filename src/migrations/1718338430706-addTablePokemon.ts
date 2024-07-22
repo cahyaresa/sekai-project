@@ -199,11 +199,11 @@ export class AddTablePokemon1718338430706 implements MigrationInterface {
             type: 'bigint',
             isNullable: true,
           },
-          {
-            name: 'sprite',
-            type: 'varchar',
-            isNullable: true,
-          },
+          // {
+          //   name: 'sprite',
+          //   type: 'varchar',
+          //   isNullable: true,
+          // },
           {
             name: 'createdBy',
             type: 'varchar',
