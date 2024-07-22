@@ -1,15 +1,6 @@
+import { PokemonEgggroupEntity } from './../../pokemon-egggroups/entities/pokemon-egggroup.entity';
 import { UseDto } from 'src/decorators/use-dto.decorators';
-import {
-  Column,
-  Entity,
-  JoinColumn,
-  ManyToMany,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
-import { TypeEntities } from 'src/modules/type/entities/type.entity';
-import { SpeciesEntity } from '../../species/entities/species.entity';
-import { AbilityEntities } from 'src/modules/abilities/entities/ability.entity';
-import { EggGroup } from 'src/modules/egg-groups/entities/egg-group.entity';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { AbstractEntity } from 'src/common/abstract.entity';
 import { PokemonDto } from '../dto/pokemon.dto';
 
@@ -22,74 +13,11 @@ export class PokemonEntities extends AbstractEntity<PokemonDto> {
   @Column({ type: 'varchar', name: 'name' })
   name: string;
 
-  @Column({ type: 'bigint', name: 'type1id' })
-  type1id: number;
-  @ManyToMany(() => TypeEntities, (pokemonType1) => pokemonType1.typeId)
-  @JoinColumn({
-    name: 'pokemontype1id',
-    referencedColumnName: 'typeid',
-  })
-  pokemonType1: TypeEntities;
-
-  @Column({ type: 'bigint', name: 'type2id' })
-  type2id: number;
-  @ManyToMany(() => TypeEntities, (pokemonType2) => pokemonType2.typeId)
-  @JoinColumn({
-    name: 'pokemontype2id',
-    referencedColumnName: 'typeid',
-  })
-  pokemonType2: TypeEntities;
-
-  @Column({ type: 'bigint', name: 'speciesid' })
-  speciesid: number;
-  @ManyToMany(() => SpeciesEntity, (pokemonSpecies) => pokemonSpecies.speciesId)
-  @JoinColumn({
-    name: 'pokemonSpeciesId',
-    referencedColumnName: 'speciesId',
-  })
-  pokemonSpecies: SpeciesEntity;
-
   @Column({ type: 'varchar', name: 'height' })
   height: string;
 
   @Column({ type: 'varchar', name: 'weight' })
   weight: string;
-
-  @Column({ type: 'bigint', name: 'abilities1id' })
-  abiliities1id: number;
-  @ManyToMany(
-    () => AbilityEntities,
-    (pokemonAbilities1) => pokemonAbilities1.abilitiesId,
-  )
-  @JoinColumn({
-    name: 'pokemonAbilities1id',
-    referencedColumnName: 'abilitiesId',
-  })
-  pokemonAbilities1: AbilityEntities;
-
-  @Column({ type: 'bigint', name: 'abilities2id' })
-  abilities2id: number;
-  @ManyToMany(
-    () => AbilityEntities,
-    (pokemonAbilities2) => pokemonAbilities2.abilitiesId,
-  )
-  @JoinColumn({
-    name: 'pokemonAbilities2id',
-    referencedColumnName: 'abilitiesId',
-  })
-  pokemonAbilities2: AbilityEntities;
-
-  @Column({ type: 'bigint', name: 'abilities3id' })
-  abilities3id: number;
-  @ManyToMany(
-    () => AbilityEntities,
-    (pokemonAbilities3) => pokemonAbilities3.abilitiesId,
-  )
-  @JoinColumn({
-    name: 'pokemonAbilities3id',
-    referencedColumnName: 'abilitiesId',
-  })
-  pokemonAbilities3: AbilityEntities;
 
   @Column({ type: 'varchar', name: 'evYield' })
   evYield: string;
@@ -105,24 +33,6 @@ export class PokemonEntities extends AbstractEntity<PokemonDto> {
 
   @Column({ type: 'varchar', name: 'growthRate' })
   growthRate: string;
-
-  @Column({ type: 'bigint', name: 'eggGroups1id' })
-  eggGroups1id: number;
-  @ManyToMany(() => EggGroup, (eggGroups1id) => eggGroups1id.eggGroupsId)
-  @JoinColumn({
-    name: 'eggGroups1id',
-    referencedColumnName: 'eggGroupsId',
-  })
-  pokemonEggGroups1id: EggGroup;
-
-  @Column({ type: 'bigint', name: 'eggGroups2id' })
-  eggGroups2id: number;
-  @ManyToMany(() => EggGroup, (eggGroups2id) => eggGroups2id.eggGroupsId)
-  @JoinColumn({
-    name: 'eggGroups2id',
-    referencedColumnName: 'eggGroupsId',
-  })
-  pokemonEggGroups2id: EggGroup;
 
   @Column({ type: 'varchar', name: 'gender' })
   gender: string;
@@ -184,6 +94,9 @@ export class PokemonEntities extends AbstractEntity<PokemonDto> {
   @Column({ type: 'bigint', name: 'speedMax' })
   speedMax: number;
 
-  @Column({ type: 'bigint', name: 'sprite' })
-  sprite: string;
+  @OneToMany(
+    () => PokemonEgggroupEntity,
+    (pokemonEgggroupEntity) => pokemonEgggroupEntity.pokemonEgggroupid,
+  )
+  PokemonEgggroupEntity: PokemonEgggroupEntity[];
 }
