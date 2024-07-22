@@ -1,0 +1,448 @@
+abilitiesId,abilities
+1,---
+2,Adaptability
+3,Adaptability (hidden ability)
+4,Aerilate
+5,Aftermath
+6,Aftermath (hidden ability)
+7,Air Lock
+8,Analytic (hidden ability)
+9,Anger Point
+10,Anger Point (hidden ability)
+11,Anger Shell
+12,Anticipation
+13,Anticipation (hidden ability)
+14,Arena Trap
+15,Armor Tail
+16,Aroma Veil
+17,Aroma Veil (hidden ability)
+18,As One
+19,Aura Break
+20,Bad Dreams
+21,Ball Fetch
+22,Battery
+23,Battle Armor
+24,Battle Armor (hidden ability)
+25,Battle Bond
+26,Beads of Ruin
+27,Beast Boost
+28,Berserk
+29,Big Pecks
+30,Big Pecks (hidden ability)
+31,Blaze
+32,Blaze (hidden ability)
+33,Bulletproof
+34,Bulletproof (hidden ability)
+35,Cheek Pouch
+36,Chilling Neigh
+37,Chlorophyll
+38,Chlorophyll (hidden ability)
+39,Clear Body
+40,Clear Body (hidden ability)
+41,Cloud Nine
+42,Cloud Nine (hidden ability)
+43,Color Change
+44,Comatose
+45,Commander
+46,Competitive
+47,Competitive (hidden ability)
+48,Compound Eyes
+49,Compound Eyes (hidden ability)
+50,Contrary
+51,Contrary (hidden ability)
+52,Corrosion
+53,Corrosion (hidden ability)
+54,Costar (hidden ability)
+55,Cotton Down
+56,Cud Chew
+57,Cud Chew (hidden ability)
+58,Curious Medicine
+59,Cursed Body
+60,Cursed Body (hidden ability)
+61,Cute Charm
+62,Cute Charm (hidden ability)
+63,Damp
+64,Damp (hidden ability)
+65,Dancer
+66,Dark Aura
+67,Dauntless Shield
+68,Dazzling
+69,Defeatist
+70,Defiant
+71,Defiant (hidden ability)
+72,Delta Stream
+73,Desolate Land
+74,Disguise
+75,Download
+76,Dragon's Maw
+77,Drizzle
+78,Drizzle (hidden ability)
+79,Drought
+80,Drought (hidden ability)
+81,Dry Skin
+82,Dry Skin (hidden ability)
+83,Early Bird
+84,Early Bird (hidden ability)
+85,Earth Eater
+86,Effect Spore
+87,Effect Spore (hidden ability)
+88,Electric Surge
+89,Electric Surge (hidden ability)
+90,Electromorphosis
+91,Emergency Exit
+92,Fairy Aura
+93,Filter
+94,Filter (hidden ability)
+95,Flame Body
+96,Flame Body (hidden ability)
+97,Flare Boost (hidden ability)
+98,Flash Fire
+99,Flash Fire (hidden ability)
+100,Flower Gift
+101,Flower Veil
+102,Fluffy
+103,Fluffy (hidden ability)
+104,Forecast
+105,Forewarn
+106,Friend Guard
+107,Friend Guard (hidden ability)
+108,Frisk
+109,Frisk (hidden ability)
+110,Full Metal Body
+111,Fur Coat
+112,Gale Wings (hidden ability)
+113,Galvanize (hidden ability)
+114,Gluttony
+115,Gluttony (hidden ability)
+116,Good as Gold
+117,Gooey
+118,Gooey (hidden ability)
+119,Gorilla Tactics
+120,Grass Pelt (hidden ability)
+121,Grassy Surge
+122,Grassy Surge (hidden ability)
+123,Grim Neigh
+124,Guard Dog
+125,Guard Dog (hidden ability)
+126,Gulp Missile
+127,Guts
+128,Guts (hidden ability)
+129,Hadron Engine
+130,Harvest (hidden ability)
+131,Healer
+132,Healer (hidden ability)
+133,Heatproof
+134,Heatproof (hidden ability)
+135,Heavy Metal
+136,Heavy Metal (hidden ability)
+137,Honey Gather
+138,Honey Gather (hidden ability)
+139,Hospitality
+140,Huge Power
+141,Huge Power (hidden ability)
+142,Hunger Switch
+143,Hustle
+144,Hustle (hidden ability)
+145,Hydration
+146,Hydration (hidden ability)
+147,Hyper Cutter
+148,Ice Body
+149,Ice Body (hidden ability)
+150,Ice Face
+151,Ice Scales (hidden ability)
+152,Illuminate
+153,Illusion
+154,Immunity
+155,Immunity (hidden ability)
+156,Imposter (hidden ability)
+157,Infiltrator
+158,Infiltrator (hidden ability)
+159,Innards Out
+160,Inner Focus
+161,Inner Focus (hidden ability)
+162,Insomnia
+163,Insomnia (hidden ability)
+164,Intimidate
+165,Intimidate (hidden ability)
+166,Intrepid Sword
+167,Iron Barbs
+168,Iron Fist
+169,Iron Fist (hidden ability)
+170,Justified
+171,Justified (hidden ability)
+172,Keen Eye
+173,Keen Eye (hidden ability)
+174,Klutz
+175,Klutz (hidden ability)
+176,Leaf Guard
+177,Leaf Guard (hidden ability)
+178,Levitate
+179,Libero (hidden ability)
+180,Light Metal
+181,Light Metal (hidden ability)
+182,Lightning Rod
+183,Lightning Rod (hidden ability)
+184,Limber
+185,Limber (hidden ability)
+186,Lingering Aroma
+187,Liquid Ooze
+188,Liquid Voice (hidden ability)
+189,Long Reach (hidden ability)
+190,Magic Bounce
+191,Magic Bounce (hidden ability)
+192,Magic Guard
+193,Magic Guard (hidden ability)
+194,Magician
+195,Magician (hidden ability)
+196,Magma Armor
+197,Magnet Pull
+198,Marvel Scale
+199,Marvel Scale (hidden ability)
+200,Mega Launcher
+201,Merciless
+202,Mimicry
+203,Mind's Eye
+204,Minus
+205,Minus (hidden ability)
+206,Mirror Armor (hidden ability)
+207,Misty Surge
+208,Misty Surge (hidden ability)
+209,Mold Breaker
+210,Mold Breaker (hidden ability)
+211,Moody (hidden ability)
+212,Motor Drive
+213,Motor Drive (hidden ability)
+214,Moxie
+215,Moxie (hidden ability)
+216,Multiscale (hidden ability)
+217,Multitype
+218,Mummy
+219,Mycelium Might
+220,Natural Cure
+221,Natural Cure (hidden ability)
+222,Neuroforce
+223,Neutralizing Gas
+224,No Guard
+225,No Guard (hidden ability)
+226,Normalize
+227,Oblivious
+228,Oblivious (hidden ability)
+229,Opportunist
+230,Orichalcum Pulse
+231,Overcoat
+232,Overcoat (hidden ability)
+233,Overgrow
+234,Overgrow (hidden ability)
+235,Own Tempo
+236,Own Tempo (hidden ability)
+237,Parental Bond
+238,Pastel Veil
+239,Perish Body (hidden ability)
+240,Pickpocket
+241,Pickpocket (hidden ability)
+242,Pickup
+243,Pickup (hidden ability)
+244,Pixilate
+245,Pixilate (hidden ability)
+246,Plus
+247,Plus (hidden ability)
+248,Poison Heal
+249,Poison Heal (hidden ability)
+250,Poison Point
+251,Poison Puppeteer
+252,Poison Touch
+253,Poison Touch (hidden ability)
+254,Power Construct
+255,Power of Alchemy (hidden ability)
+256,Power Spot
+257,Prankster
+258,Prankster (hidden ability)
+259,Pressure
+260,Pressure (hidden ability)
+261,Primordial Sea
+262,Prism Armor
+263,Propeller Tail (hidden ability)
+264,Protean (hidden ability)
+265,Protosynthesis
+266,Psychic Surge
+267,Psychic Surge (hidden ability)
+268,Punk Rock
+269,Pure Power
+270,Purifying Salt
+271,Quark Drive
+272,Queenly Majesty
+273,Quick Draw
+274,Quick Feet
+275,Quick Feet (hidden ability)
+276,Rain Dish
+277,Rain Dish (hidden ability)
+278,Rattled
+279,Rattled (hidden ability)
+280,Receiver
+281,Reckless
+282,Reckless (hidden ability)
+283,Refrigerate
+284,Regenerator
+285,Regenerator (hidden ability)
+286,Ripen
+287,Rivalry
+288,Rivalry (hidden ability)
+289,RKS System
+290,Rock Head
+291,Rock Head (hidden ability)
+292,Rocky Payload (hidden ability)
+293,Rough Skin
+294,Rough Skin (hidden ability)
+295,Run Away
+296,Run Away (hidden ability)
+297,Sand Force
+298,Sand Force (hidden ability)
+299,Sand Rush
+300,Sand Rush (hidden ability)
+301,Sand Spit
+302,Sand Stream
+303,Sand Veil
+304,Sand Veil (hidden ability)
+305,Sap Sipper
+306,Sap Sipper (hidden ability)
+307,Schooling
+308,Scrappy
+309,Scrappy (hidden ability)
+310,Screen Cleaner
+311,Seed Sower
+312,Serene Grace
+313,Serene Grace (hidden ability)
+314,Shadow Shield
+315,Shadow Tag
+316,Shadow Tag (hidden ability)
+317,Sharpness
+318,Sharpness (hidden ability)
+319,Shed Skin
+320,Shed Skin (hidden ability)
+321,Sheer Force
+322,Sheer Force (hidden ability)
+323,Shell Armor
+324,Shell Armor (hidden ability)
+325,Shield Dust
+326,Shields Down
+327,Simple
+328,Simple (hidden ability)
+329,Skill Link
+330,Skill Link (hidden ability)
+331,Slow Start
+332,Slow Start (hidden ability)
+333,Slush Rush
+334,Slush Rush (hidden ability)
+335,Sniper
+336,Sniper (hidden ability)
+337,Snow Cloak
+338,Snow Cloak (hidden ability)
+339,Snow Warning
+340,Snow Warning (hidden ability)
+341,Solar Power
+342,Solar Power (hidden ability)
+343,Solid Rock
+344,Soul-Heart
+345,Soundproof
+346,Soundproof (hidden ability)
+347,Speed Boost
+348,Speed Boost (hidden ability)
+349,Stakeout
+350,Stakeout (hidden ability)
+351,Stall
+352,Stalwart (hidden ability)
+353,Stamina
+354,Stance Change
+355,Static
+356,Static (hidden ability)
+357,Steadfast
+358,Steadfast (hidden ability)
+359,Steam Engine
+360,Steelworker
+361,Steely Spirit (hidden ability)
+362,Stench
+363,Stench (hidden ability)
+364,Sticky Hold
+365,Sticky Hold (hidden ability)
+366,Storm Drain
+367,Storm Drain (hidden ability)
+368,Strong Jaw
+369,Sturdy
+370,Sturdy (hidden ability)
+371,Suction Cups
+372,Super Luck
+373,Super Luck (hidden ability)
+374,Supersweet Syrup
+375,Supreme Overlord
+376,Surge Surfer
+377,Swarm
+378,Swarm (hidden ability)
+379,Sweet Veil
+380,Sweet Veil (hidden ability)
+381,Swift Swim
+382,Swift Swim (hidden ability)
+383,Sword of Ruin
+384,Symbiosis (hidden ability)
+385,Synchronize
+386,Tablets of Ruin
+387,Tangled Feet
+388,Tangled Feet (hidden ability)
+389,Tangling Hair
+390,Technician
+391,Technician (hidden ability)
+392,Telepathy
+393,Telepathy (hidden ability)
+394,Tera Shell
+395,Tera Shift
+396,Teraform Zero
+397,Teravolt
+398,Thermal Exchange
+399,Thick Fat
+400,Thick Fat (hidden ability)
+401,Tinted Lens
+402,Tinted Lens (hidden ability)
+403,Torrent
+404,Torrent (hidden ability)
+405,Tough Claws
+406,Toxic Boost (hidden ability)
+407,Toxic Chain
+408,Toxic Debris
+409,Trace
+410,Transistor
+411,Triage
+412,Truant
+413,Truant (hidden ability)
+414,Turboblaze
+415,Unaware
+416,Unaware (hidden ability)
+417,Unburden
+418,Unburden (hidden ability)
+419,Unnerve
+420,Unnerve (hidden ability)
+421,Unseen Fist
+422,Vessel of Ruin
+423,Victory Star
+424,Vital Spirit
+425,Vital Spirit (hidden ability)
+426,Volt Absorb
+427,Volt Absorb (hidden ability)
+428,Wandering Spirit
+429,Water Absorb
+430,Water Absorb (hidden ability)
+431,Water Bubble
+432,Water Compaction
+433,Water Veil
+434,Water Veil (hidden ability)
+435,Weak Armor
+436,Weak Armor (hidden ability)
+437,Well-Baked Body
+438,White Smoke
+439,White Smoke (hidden ability)
+440,Wimp Out
+441,Wind Power
+442,Wind Rider
+443,Wonder Guard
+444,Wonder Skin
+445,Wonder Skin (hidden ability)
+446,Zen Mode (hidden ability)
+447,Zero to Hero

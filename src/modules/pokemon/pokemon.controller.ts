@@ -23,6 +23,7 @@ interface ResponseJson {
 export class PokemonController {
   constructor(private service: PokemonService) {}
 
+  // tutorial
   @Get('/set-cookie')
   setCookie(@Query('name') name: string, @Res() response: Response) {
     response.cookie('name', name);
@@ -66,5 +67,10 @@ export class PokemonController {
     @Query('type') type: string,
   ): string {
     return `hello ${name}, ${type}`;
+  }
+
+  @Get('/get-all')
+  getAll() {
+    return this.service.findAll();
   }
 }
