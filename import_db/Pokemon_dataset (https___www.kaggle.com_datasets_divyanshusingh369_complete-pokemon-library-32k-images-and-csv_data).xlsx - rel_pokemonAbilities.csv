@@ -1,4 +1,4 @@
-pokemonAbilitiesId,pokemonId,AbilitiesId
+pokemonAbilitiesId,pokemonId,abilitiesId
 1,1,339
 2,1,346
 3,2,339
@@ -2734,4 +2734,3 @@ pokemonAbilitiesId,pokemonId,AbilitiesId
 2733,1214,19
 2734,1214,254
 2735,1215,254
-2736,id,abilities1id

@@ -14,8 +14,8 @@ import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { SpeciesDto } from './dto/species';
 import { SpeciesService } from './species.service';
 
-@Controller('-species')
-@ApiTags(' Species')
+@Controller('species')
+@ApiTags('Species')
 export class SpeciesController {
   constructor(private readonly speciesService: SpeciesService) {}
 

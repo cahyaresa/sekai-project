@@ -14,8 +14,8 @@ import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { AbilitiesDto } from './dto/ability';
 import { AbilitiesService } from './abilities.service';
 
-@Controller('pokemon-abilities')
-@ApiTags('Pokemon Abilities')
+@Controller('abilities')
+@ApiTags('Abilities')
 export class AbilitiesController {
   constructor(private readonly abilitiesService: AbilitiesService) {}
 

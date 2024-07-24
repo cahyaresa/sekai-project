@@ -3,6 +3,8 @@ import { UseDto } from 'src/decorators/use-dto.decorators';
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { AbstractEntity } from 'src/common/abstract.entity';
 import { PokemonDto } from '../dto/pokemon.dto';
+import { PokemonAbility } from 'src/modules/pokemon-abilities/entities/pokemon-ability.entity';
+import { PokemonSpecy } from 'src/modules/pokemon-species/entities/pokemon-specy.entity';
 
 @Entity('tbl_pokemon')
 @UseDto(PokemonDto)
@@ -96,7 +98,16 @@ export class PokemonEntities extends AbstractEntity<PokemonDto> {
 
   @OneToMany(
     () => PokemonEgggroupEntity,
-    (pokemonEgggroupEntity) => pokemonEgggroupEntity.pokemonEgggroupid,
+    (eggGroup) => eggGroup.pokemonEgggroupid,
   )
-  PokemonEgggroupEntity: PokemonEgggroupEntity[];
+  eggGroup: PokemonEgggroupEntity[];
+
+  @OneToMany(() => PokemonAbility, (ability) => ability.pokemonAbilitiesId)
+  ability: PokemonAbility[];
+
+  @OneToMany(
+    () => PokemonSpecy,
+    (pokemonSpecies) => pokemonSpecies.pokemonSpeciesId,
+  )
+  species: PokemonSpecy[];
 }

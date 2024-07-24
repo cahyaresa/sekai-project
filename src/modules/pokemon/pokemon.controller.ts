@@ -9,16 +9,17 @@ import {
   Req,
   Res,
 } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { Request, Response } from 'express';
 import { PokemonService } from './pokemon.service';
+import { PokemonDto } from './dto/pokemon.dto';
 
 interface ResponseJson {
   data: string;
   size: string;
 }
 
-@Controller('/api/pokemon')
+@Controller('pokemon')
 @ApiTags('pokemon')
 export class PokemonController {
   constructor(private service: PokemonService) {}
@@ -70,7 +71,18 @@ export class PokemonController {
   }
 
   @Get('/get-all')
-  getAll() {
-    return this.service.findAll();
+  getAll(@Query('page') page: number, @Query('limit') limit: number) {
+    return this.service.findAll(page, limit);
+  }
+
+  @Get('/find-by-id')
+  findOne(@Query('id') id: string) {
+    return this.service.findOne(+id);
+  }
+
+  @Get('/get-eggGroups-by-name')
+  @ApiCreatedResponse({ type: PokemonDto })
+  findByName(@Query('name') name: string) {
+    return this.service.getPokemonByName(name);
   }
 }

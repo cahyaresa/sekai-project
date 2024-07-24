@@ -5,28 +5,24 @@ import {
   TableForeignKey,
 } from 'typeorm';
 
-export class AddTablePokemonEggGroups1721378442860
-  implements MigrationInterface
-{
+export class AddTablePokemonType1721705844964 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'rel_pokemonEggGroup',
+        name: 'rel_pokemonType',
         columns: [
           {
-            name: 'pokemonEgggroupid',
+            name: 'pokemonTypeId',
             type: 'bigint',
             isPrimary: true,
           },
           {
             name: 'pokemonId',
             type: 'bigint',
-            isNullable: true,
           },
           {
-            name: 'eggGroupsId',
+            name: 'typeid',
             type: 'bigint',
-            isNullable: true,
           },
           {
             name: 'createdBy',
@@ -52,7 +48,7 @@ export class AddTablePokemonEggGroups1721378442860
       }),
     );
 
-    await queryRunner.createForeignKeys('rel_pokemonEggGroup', [
+    await queryRunner.createForeignKeys('rel_pokemonType', [
       new TableForeignKey({
         columnNames: ['pokemonId'],
         referencedTableName: 'tbl_pokemon',
@@ -61,9 +57,9 @@ export class AddTablePokemonEggGroups1721378442860
         onDelete: 'CASCADE',
       }),
       new TableForeignKey({
-        columnNames: ['eggGroupsId'],
-        referencedTableName: 'tbl_eggGrpups',
-        referencedColumnNames: ['eggGroupsId'],
+        columnNames: ['typeId'],
+        referencedTableName: 'tbl_type',
+        referencedColumnNames: ['typeId'],
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       }),
@@ -71,6 +67,6 @@ export class AddTablePokemonEggGroups1721378442860
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('rel_pokemonEggGroup');
+    await queryRunner.dropTable('rel_pokemonType');
   }
 }

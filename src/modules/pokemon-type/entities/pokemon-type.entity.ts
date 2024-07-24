@@ -1,4 +1,5 @@
 import { AbstractEntity } from 'src/common/abstract.entity';
+import { PokemonTypeDto } from '../dto/pokemon-type.dto';
 import { UseDto } from 'src/decorators/use-dto.decorators';
 import {
   Column,
@@ -7,15 +8,14 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { PokemonEgggroupDto } from '../dto/pokemon-egggroups.dto';
 import { PokemonEntities } from 'src/modules/pokemon/entities/pokemon.entity';
-import { EggGroup } from 'src/modules/egg-groups/entities/egg-group.entity';
+import { TypeEntities } from 'src/modules/type/entities/type.entity';
 
-@Entity('rel_pokemonEgggroup')
-@UseDto(PokemonEgggroupDto)
-export class PokemonEgggroupEntity extends AbstractEntity {
-  @PrimaryGeneratedColumn({ type: 'bigint', name: 'pokemonEgggroupid' })
-  pokemonEgggroupid: number;
+@Entity('rel_pokemonType')
+@UseDto(PokemonTypeDto)
+export class PokemonType extends AbstractEntity {
+  @PrimaryGeneratedColumn({ type: 'bigint', name: 'pokemonTypeId' })
+  pokemonTypeId: number;
 
   @Column({ nullable: true })
   pokemonId: number;
@@ -27,11 +27,11 @@ export class PokemonEgggroupEntity extends AbstractEntity {
   pokemon: PokemonEntities;
 
   @Column({ nullable: true })
-  eggGroupsId: number;
-  @ManyToOne(() => EggGroup, (eggGroup) => eggGroup.eggGroupsId)
+  typeId: number;
+  @ManyToOne(() => TypeEntities, (type) => type.typeId)
   @JoinColumn({
-    name: 'eggGroupsId',
-    referencedColumnName: 'eggGroupsId',
+    name: 'typeId',
+    referencedColumnName: 'typeId',
   })
-  eggGroup: EggGroup;
+  type: TypeEntities;
 }

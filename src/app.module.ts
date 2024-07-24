@@ -12,6 +12,9 @@ import { TypeModule } from './modules/type/type.module';
 import { AbilitiesModule } from './modules/abilities/abilities.module';
 import { EggGroupsModule } from './modules/egg-groups/egg-groups.module';
 import { PokemonEgggroupsModule } from './modules/pokemon-egggroups/pokemon-egggroups.module';
+import { PokemonTypeModule } from './modules/pokemon-type/pokemon-type.module';
+import { PokemonAbilitiesModule } from './modules/pokemon-abilities/pokemon-abilities.module';
+import { PokemonSpeciesModule } from './modules/pokemon-species/pokemon-species.module';
 
 const ApiModules = [
   SharedModule,
@@ -21,6 +24,11 @@ const ApiModules = [
   SpeciesModule,
   TypeModule,
   AbilitiesModule,
+  EggGroupsModule,
+  PokemonEgggroupsModule,
+  PokemonTypeModule,
+  PokemonAbilitiesModule,
+  PokemonSpeciesModule,
 ];
 
 @Module({
@@ -36,8 +44,6 @@ const ApiModules = [
       },
       inject: [ApiConfigService],
     }),
-    EggGroupsModule,
-    PokemonEgggroupsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

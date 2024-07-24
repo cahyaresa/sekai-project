@@ -22,7 +22,7 @@ export class AbilitiesService {
         .select(['pokemon.abilitiesId', 'pokemon.abilities']);
 
       const [data, itemCount] = await Promise.all([
-        query.orderBy('eggGroups.abilitiesId', 'ASC').getMany(),
+        query.orderBy('pokemon.abilitiesId', 'ASC').getMany(),
         query.getCount(),
       ]);
       return { data, itemCount };
