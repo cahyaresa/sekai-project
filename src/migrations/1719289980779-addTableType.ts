@@ -32,10 +32,12 @@ export class AddTableType1719289980779 implements MigrationInterface {
           {
             name: 'createdDate',
             type: 'datetime2',
+            isNullable: true,
           },
           {
             name: 'updatedDate',
             type: 'datetime2',
+            isNullable: true,
           },
         ],
       }),

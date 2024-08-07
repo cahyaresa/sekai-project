@@ -32,10 +32,12 @@ export class AddTableEggGroups1719290781250 implements MigrationInterface {
           {
             name: 'createdDate',
             type: 'datetime2',
+            isNullable: true,
           },
           {
             name: 'updatedDate',
             type: 'datetime2',
+            isNullable: true,
           },
         ],
       }),

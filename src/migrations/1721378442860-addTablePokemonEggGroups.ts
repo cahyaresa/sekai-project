@@ -14,7 +14,7 @@ export class AddTablePokemonEggGroups1721378442860
         name: 'rel_pokemonEggGroup',
         columns: [
           {
-            name: 'pokemonEgggroupid',
+            name: 'pokemonEgggroupsId',
             type: 'bigint',
             isPrimary: true,
           },
