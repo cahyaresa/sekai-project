@@ -44,26 +44,6 @@ export class AddTablePokemonAbilities1721704109459
             name: 'updatedDate',
             type: 'datetime2',
           },
-          {
-            name: 'createdBy',
-            type: 'varchar',
-            isNullable: true,
-          },
-          {
-            name: 'updatedBy',
-            type: 'varchar',
-            isNullable: true,
-          },
-          {
-            name: 'createdDate',
-            type: 'datetime2',
-            isNullable: true,
-          },
-          {
-            name: 'updatedDate',
-            type: 'datetime2',
-            isNullable: true,
-          },
         ],
       }),
     );
