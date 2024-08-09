@@ -13,6 +13,7 @@ import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { Request, Response } from 'express';
 import { PokemonService } from './pokemon.service';
 import { PokemonDto } from './dto/pokemon.dto';
+import { PokemonLiteInfoDto } from './dto/pokemon-lite.dto';
 
 interface ResponseJson {
   data: string;
@@ -71,17 +72,19 @@ export class PokemonController {
   }
 
   @Get('/get-all')
+  @ApiCreatedResponse({ type: PokemonLiteInfoDto })
   getAll(@Query('page') page: number, @Query('limit') limit: number) {
     return this.service.findAll(page, limit);
   }
 
   @Get('/find-by-id')
+  @ApiCreatedResponse({ type: PokemonDto })
   findOne(@Query('id') id: string) {
     return this.service.findOne(+id);
   }
 
-  @Get('/get-eggGroups-by-name')
-  @ApiCreatedResponse({ type: PokemonDto })
+  @Get('pokemon-by-name')
+  @ApiCreatedResponse({ type: PokemonLiteInfoDto })
   findByName(@Query('name') name: string) {
     return this.service.getPokemonByName(name);
   }

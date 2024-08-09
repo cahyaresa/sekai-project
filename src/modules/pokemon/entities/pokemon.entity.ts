@@ -15,6 +15,9 @@ export class PokemonEntities extends AbstractEntity<PokemonDto> {
   @Column({ type: 'varchar', name: 'name' })
   name: string;
 
+  @Column({ type: 'bigint', name: 'pokedex' })
+  pokedex: number;
+
   @Column({ type: 'varchar', name: 'height' })
   height: string;
 
@@ -95,6 +98,9 @@ export class PokemonEntities extends AbstractEntity<PokemonDto> {
 
   @Column({ type: 'bigint', name: 'speedMax' })
   speedMax: number;
+
+  @Column({ type: 'varchar', name: 'sprite' })
+  sprite: string;
 
   @OneToMany(
     () => PokemonEgggroupEntity,

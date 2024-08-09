@@ -20,6 +20,11 @@ export class PokemonAbilitiesController {
     type: String,
   })
   @ApiQuery({
+    name: 'pokemonId',
+    required: false,
+    type: Number,
+  })
+  @ApiQuery({
     name: 'limit',
     required: false,
     type: Number,
@@ -28,8 +33,14 @@ export class PokemonAbilitiesController {
   findAll(
     @Query('ability') ability: string,
     @Query('pokemon') pokemon: string,
+    @Query('pokemonId') pokemonId: number,
     @Query('limit') limit: number,
   ) {
-    return this.pokemonAbilitiesService.findAll(ability, pokemon, limit);
+    return this.pokemonAbilitiesService.findAll(
+      ability,
+      pokemon,
+      pokemonId,
+      limit,
+    );
   }
 }

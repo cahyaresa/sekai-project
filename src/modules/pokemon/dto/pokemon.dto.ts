@@ -27,6 +27,9 @@ export class PokemonDto extends AbstractDto {
   @ApiProperty()
   readonly weight: string;
 
+  @ApiProperty()
+  readonly pokedex: number;
+
   // @ApiProperty()
   // readonly abilities1id: number;
 
@@ -124,6 +127,7 @@ export class PokemonDto extends AbstractDto {
     super(pokemonEntity, { excludesFields: true });
     this.pokemonId = pokemonEntity.pokemonId;
     this.name = pokemonEntity.name;
+    this.pokedex = pokemonEntity.pokedex;
     // this.type1id = pokemonEntity.type1id;
     // this.type2id = pokemonEntity.type2id;
     // this.speciesid = pokemonEntity.speciesid;
@@ -156,6 +160,6 @@ export class PokemonDto extends AbstractDto {
     this.speedBase = pokemonEntity.speedBase;
     this.speedMin = pokemonEntity.speedMin;
     this.speedMax = pokemonEntity.speedMax;
-    this.sprite = this.sprite;
+    this.sprite = pokemonEntity.sprite;
   }
 }

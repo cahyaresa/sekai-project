@@ -12,6 +12,7 @@ export class PokemonAbilitiesService {
   async findAll(
     ability: string,
     pokemon: string,
+    pokemonId: number,
     limit: number,
   ): Promise<{
     data: PokemonAbility[];
@@ -27,6 +28,24 @@ export class PokemonAbilitiesService {
         'ability.abilities',
       ]);
 
+    if (pokemonId) {
+      query = query.where('pokemon.pokemonId = :pokemonId', {
+        pokemonId,
+      });
+    }
+
+    if (pokemonId && ability && pokemon) {
+      query = query.where('pokemon.pokemonId = :pokemonId', {
+        pokemonId,
+      });
+      query = query.andWhere('LOWER(ability.abilities) like :ability', {
+        ability: `%${ability.toLowerCase()}%`,
+      });
+      query = query.andWhere('LOWER(pokemon.name) like :pokemon', {
+        pokemon: `%${pokemon.toLocaleLowerCase()}%`,
+      });
+    }
+
     if (ability && pokemon) {
       query = query.where('LOWER(ability.abilities) like :ability', {
         ability: `%${ability.toLowerCase()}%`,
@@ -35,6 +54,7 @@ export class PokemonAbilitiesService {
         pokemon: `%${pokemon.toLocaleLowerCase()}%`,
       });
     }
+
     if (ability) {
       query = query.where('LOWER(ability.abilities) like :ability', {
         ability: `%${ability.toLowerCase()}%`,
