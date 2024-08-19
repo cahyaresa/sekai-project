@@ -17,6 +17,7 @@ export class PokemonTypeService {
     data: PokemonType[];
     itemCount: number;
   }> {
+    let page = 1; //need change
     let query = this.pokemonSpecyRepository
       .createQueryBuilder('pokemonType')
       .leftJoin('pokemonType.pokemon', 'pokemon')
@@ -48,6 +49,10 @@ export class PokemonTypeService {
       query.getRawMany(),
       query.getCount(),
     ]);
+
+    const pageCount = Math.ceil(itemCount / limit);
+    const hasPreviousPage = page > 1;
+    const hasNextPage = page < pageCount;
 
     return {
       data,

@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { PokemonEntities } from './entities/pokemon.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { of } from 'rxjs';
 
 @Injectable()
 export class PokemonService {
@@ -27,7 +28,7 @@ export class PokemonService {
     try {
       const offset = (page - 1) * limit;
 
-      const query = this.pokemonRepository
+      let query = this.pokemonRepository
         .createQueryBuilder('pokemon')
         .select([
           'pokemon.pokemonId',
@@ -36,16 +37,18 @@ export class PokemonService {
           'pokemon.sprite',
         ]);
 
-      const [data] = await Promise.all([
-        query.orderBy('pokemon.pokemonId', 'ASC').getMany(),
-        query.limit(limit ? limit : 10),
-        query.offset(offset),
-        query.getMany(),
+      const [data, itemCount] = await Promise.all([
+        query
+          .orderBy('pokemon.pokemonId', 'ASC')
+          .limit(limit ? limit : 10)
+          .offset(offset)
+          .getRawMany(),
+        query.getCount(),
       ]);
 
-      const itemCount = await query.getCount();
+      console.log(page);
 
-      const pageCount = Math.ceil(itemCount / page);
+      const pageCount = Math.ceil(itemCount / limit);
       const hasPreviousPage = page > 1;
       const hasNextPage = page < pageCount;
 
